@@ -28,7 +28,7 @@ class GeneratedSuggestionsActivity : AppCompatActivity() {
         val displayTextView = findViewById<TextView>(R.id.textViewDisplay)
         val resetButton = findViewById<Button>(R.id.btnReset)
 
-        //If statements when the user enters the time of day in the Main Activity
+        // Nested if statements for when the user enters the time of day in the Main Activity
         if (inputTime == "Morning") {
             // Text Views will display the meal suggestions of the time of day entered by the user
             displayTextView.text = "The meal suggestions for $inputTime are as follows: \n Bacon and Eggs or \n Toast. " +
@@ -49,8 +49,8 @@ class GeneratedSuggestionsActivity : AppCompatActivity() {
 
         //This button will allow the user to clear the meal suggestion and return to the Main Activity screen
         resetButton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            val intent2 = Intent(this, MainActivity::class.java)
+            startActivity(intent2)
         }
 
     }
