@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
             insets
         } //end of ViewCompat
 
-        //Declaring the variables on the user interface
+        //Declaring the variables on the user interface - edit text input for the user to enter time of day and button to generate a meal suggestion once clicked
         val inputTime = findViewById<EditText>(R.id.editTextInput)
         val generateMealButton = findViewById<Button>(R.id.Btngenerate)
 
