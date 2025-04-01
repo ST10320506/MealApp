@@ -21,7 +21,7 @@ class GeneratedSuggestionsActivity : AppCompatActivity() {
         }// end of ViewCompat
 
         //Declaring the time input variable used from the previous activity - Main Activity
-        //Reference: https://github.com/liehanels/UserInterface
+        //Reference: https://github.com/liehanels/UserInterface - Liehan Els, 2025. Liehan had written code to show how to receive information from screen 1 / main activity to this screen. [online] Available at: <https://github.com/liehanels/UserInterface> [Accessed 31 March 2025].
         val intent: Intent = intent
         val inputTime = intent.getStringExtra("inputTime")
 
@@ -29,12 +29,12 @@ class GeneratedSuggestionsActivity : AppCompatActivity() {
         val displayTextView = findViewById<TextView>(R.id.textViewDisplay)
         val resetButton = findViewById<Button>(R.id.btnReset)
 
-        // Nested if statements for when the user enters the time of day in the Main Activity
-        //Reference: https://github.com/liehanels/UserInterface and https://github.com/liehanels/NumberGuesser
+        //Nested if statements for when the user enters the time of day in the Main Activity
+        //Reference: https://github.com/liehanels/NumberGuesser - Liehan Els, 2025. Liehan had written code to help with understanding if statements. [online] Available at: <https://github.com/liehanels/NumberGuesser> [Accessed 31 March 2025].
         if (inputTime == "Morning") {
             // Text Views will display the time of day entered by the user in Main Activity
             // once this information has passed to the second screen it will display the meal suggestion linked to the time of day entered
-            //Reference: https://github.com/liehanels/UserInterface
+            //Reference: https://github.com/liehanels/UserInterface - Liehan Els, 2025. Liehan had written code to show how to display the information being passed from screen 1/ Main Activity to this screen. [online] Available at: <https://github.com/liehanels/UserInterface> [Accessed 31 March 2025].
             displayTextView.text = "The meal suggestions for $inputTime are as follows: \n Bacon and Eggs or \n Toast. " +
                     "\nTo Drink: Juice or a hot beverage (eg: coffee)."
         } else if (inputTime == "Mid-morning") {
@@ -52,7 +52,7 @@ class GeneratedSuggestionsActivity : AppCompatActivity() {
         }
 
         //This button will allow the user to clear the meal suggestion and return to the Main Activity screen
-        //Reference: https://github.com/liehanels/UserInterface
+        //Reference: https://github.com/liehanels/UserInterface - Liehan Els, 2025. Liehan had written code to show how to clear and return to screen 1/ Main Activity using a button. [online] Available at: <https://github.com/liehanels/UserInterface> [Accessed 31 March 2025].
         resetButton.setOnClickListener {
             val intent2 = Intent(this, MainActivity::class.java)
             startActivity(intent2)
