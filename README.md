@@ -27,4 +27,4 @@ This application aims to make meal suggestions quick and fun.
 ## Getting started
 
 1. **Clone the repository:** ```bash
-   git clone []
+   git clone [https://github.com/ST10320506/MealApp.git]
