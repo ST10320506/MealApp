@@ -20,17 +20,21 @@ class GeneratedSuggestionsActivity : AppCompatActivity() {
             insets
         }// end of ViewCompat
 
-        //Declaring the time input from the previous activity - Main Activity
+        //Declaring the time input variable used from the previous activity - Main Activity
+        //Reference: https://github.com/liehanels/UserInterface
         val intent: Intent = intent
         val inputTime = intent.getStringExtra("inputTime")
 
-        //Declaring the text view to display the meal suggestions
+        //Declaring the text view to display the meal suggestions and reset button to clear user input ad return to Main Activity screen
         val displayTextView = findViewById<TextView>(R.id.textViewDisplay)
         val resetButton = findViewById<Button>(R.id.btnReset)
 
         // Nested if statements for when the user enters the time of day in the Main Activity
+        //Reference: https://github.com/liehanels/UserInterface and https://github.com/liehanels/NumberGuesser
         if (inputTime == "Morning") {
-            // Text Views will display the meal suggestions of the time of day entered by the user
+            // Text Views will display the time of day entered by the user in Main Activity
+            // once this information has passed to the second screen it will display the meal suggestion linked to the time of day entered
+            //Reference: https://github.com/liehanels/UserInterface
             displayTextView.text = "The meal suggestions for $inputTime are as follows: \n Bacon and Eggs or \n Toast. " +
                     "\nTo Drink: Juice or a hot beverage (eg: coffee)."
         } else if (inputTime == "Mid-morning") {
@@ -48,6 +52,7 @@ class GeneratedSuggestionsActivity : AppCompatActivity() {
         }
 
         //This button will allow the user to clear the meal suggestion and return to the Main Activity screen
+        //Reference: https://github.com/liehanels/UserInterface
         resetButton.setOnClickListener {
             val intent2 = Intent(this, MainActivity::class.java)
             startActivity(intent2)
