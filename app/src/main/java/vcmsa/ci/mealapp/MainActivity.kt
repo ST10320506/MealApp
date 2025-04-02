@@ -2,6 +2,7 @@ package vcmsa.ci.mealapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -30,6 +31,9 @@ class MainActivity : AppCompatActivity() {
             //If statements for when the user enters different times of the day
             //Reference: https://github.com/liehanels/NumberGuesser - Liehan Els, 2025. Liehan had written code to help with understanding if statements. [online] Available at: <https://github.com/liehanels/NumberGuesser> [Accessed 31 March 2025].
             if(inputTime.text.toString() == "Morning") {
+                //Logging function for debugging purposes
+                //Reference: https://github.com/liehanels/CalculatorApp - Liehan Els, 2025. Liehan had written code to help with understanding and using log functions. [online] Available at: <https://github.com/liehanels/CalculatorApp> [Accessed 02 April 2025].
+                Log.d("MainActivity", "Entered Morning")
                 //Intent code is used to pass this information "Morning" to the second screen (Generated Suggestions Activity)
                 //Reference: https://github.com/liehanels/UserInterface - Liehan Els, 2025. Liehan had written code to show how to pass information between two screens/activities. [online] Available at: <https://github.com/liehanels/UserInterface> [Accessed 31 March 2025].
                 val intent = Intent (this, GeneratedSuggestionsActivity::class.java)
@@ -37,30 +41,35 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
 
             } else if (inputTime.text.toString() == "Mid-morning") {
+                Log.d("MainActivity", "Entered Mid-morning")
                 //Intent code is used to pass this information "Mid-morning" to the second screen (Generated Suggestions Activity)
                 val intent = Intent (this, GeneratedSuggestionsActivity::class.java)
                 intent.putExtra("inputTime", inputTime.text.toString())
                 startActivity(intent)
 
             } else if (inputTime.text.toString() == "Afternoon") {
+                Log.d("MainActivity", "Entered Afternoon")
                 //Intent code is used to pass this information "Afternoon" to the second screen (Generated Suggestions Activity)
                 val intent = Intent(this, GeneratedSuggestionsActivity::class.java)
                 intent.putExtra("inputTime", inputTime.text.toString())
                 startActivity(intent)
 
             } else if (inputTime.text.toString() == "Mid-afternoon") {
+                Log.d("MainActivity", "Entered Mid-afternoon")
                 //Intent code is used to pass this information "Mid-afternoon" to the second screen (Generated Suggestions Activity)
                 val intent = Intent(this, GeneratedSuggestionsActivity::class.java)
                 intent.putExtra("inputTime", inputTime.text.toString())
                 startActivity(intent)
 
             } else if (inputTime.text.toString() == "Dinner") {
+                Log.d("MainActivity", "Entered Dinner")
                 //Intent code is used to pass this information "Dinner" to the second screen (Generated Suggestions Activity)
                 val intent = Intent(this, GeneratedSuggestionsActivity::class.java)
                 intent.putExtra("inputTime", inputTime.text.toString())
                 startActivity(intent)
 
             } else if(inputTime.text.toString() == "Dessert") {
+                Log.d("MainActivity", "Entered Dessert")
                 //Intent code is used to pass this information "Dessert" to the second screen (Generated Suggestions Activity)
                 val intent = Intent(this, GeneratedSuggestionsActivity::class.java)
                 intent.putExtra("inputTime", inputTime.text.toString())
